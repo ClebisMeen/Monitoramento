@@ -1,0 +1,27 @@
+<main>
+    <section class="container margin-top">
+        <div class="row">
+            <table ng-if="arrayHorarios.length > 0" class="centered striped">
+                <thead>
+                <tr>
+                    <th>Horários</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="horario in arrayHorarios">
+                    <td>{{horario.horarioInicio}}:{{horario.horarioFim}}</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <li class="btn-floating btn-large waves-effect waves-light red right">
+                <a href="/horario" class="active">
+                    <i class="material-icons">add</i>
+                </a>
+            </li>
+        </div>
+    </section>
+</main>

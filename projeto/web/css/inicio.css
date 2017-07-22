@@ -1,0 +1,104 @@
+.parallax-container {
+    height: 580px;
+    z-index: 1;
+}
+.tamanho-parallax{
+    height: 180px;
+    z-index: 2;
+}
+.color-nav {
+    background-color: rgba(255,255,255,0.1);
+    z-index: 2;
+}
+nav {
+    margin-top: 5px;
+}
+nav .brand-logo {
+    color: #000;
+}
+nav ul a {
+    color: #000;
+}
+nav ul a:hover {
+    /*background-color: rgba(238,238,238,0.3);*/
+    background-color: rgba(224, 242, 241, 0.3);
+}
+.img-logo {
+    width: 148px;
+    height: 69px;
+    background: url("../../images/logo-fatec.png");
+    background-repeat: no-repeat;
+}
+#centralizado{
+    width:700px;
+    height:300px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-350px;
+    margin-top:-150px;
+}
+#paralax-inicio{
+    width:200px;
+    height:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-100px;
+    margin-top:-50px;
+}
+.fixa-botao{
+    background-color: #26a69a;
+    position: fixed;
+    float: right;
+    right: 20px;
+    bottom: 30px;
+    display: none;
+    /*transition: all 2s ease-out;*/
+}
+.espaco-curso{
+    /*margin-top: 2%;*/
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+.ident{
+    text-indent: 2.5em;
+    text-align: justify;
+}
+.size{
+    font-size: 16px;
+}
+.text-center{
+    text-align: center;
+}
+.padding-curso{
+    padding: 4%;
+}
+.container .row {
+    margin-left: -7.5rem;
+    margin-right: -7.5rem;
+}
+#gpi:hover{
+
+}
+.cor-letra{
+    color:#26a69a;
+}
+.redes-sociais a i{
+    color:#FFF;
+    cursor: pointer;
+    padding: 2.5%;
+}
+.cor-footer{
+    background-color:#26a69a;
+}
+.cursos{
+    background-color: rgba(224, 242, 241, 0.3);
+}
+#ads, #ge, #gpi{
+    background-color: #FFF;
+
+}
+#botao-voltar-topo{
+    z-index: 999;
+}

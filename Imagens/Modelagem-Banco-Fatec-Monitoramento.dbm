@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.8.2" last-position="1320,308" last-zoom="2"
+	 default-schema="public" default-owner="postgres">
+<database name="novo_banco_de_dados">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<schema name="seguranca" rect-visible="true" fill-color="#e1e1e1">
+	<role name="postgres"/>
+</schema>
+
+<table name="professor">
+	<schema name="seguranca"/>
+	<role name="postgres"/>
+	<position x="100" y="103"/>
+	<column name="idprofessor" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="254"/>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="254"/>
+	</column>
+	<column name="senha" not-null="true">
+		<type name="varchar" length="200"/>
+	</column>
+	<column name="telefone">
+		<type name="varchar" length="25"/>
+	</column>
+	<column name="datainsercao" not-null="true">
+		<type name="date"/>
+	</column>
+	<column name="usuarioinsercao" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="dataalteracao">
+		<type name="date"/>
+	</column>
+	<column name="usuarioalteracao">
+		<type name="integer"/>
+	</column>
+	<constraint name="idprofessor" type="pk-constr" table="seguranca.professor">
+		<columns names="idprofessor" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<schema name="administracao" rect-visible="true" fill-color="#e1e1e1">
+	<role name="postgres"/>
+</schema>
+
+<table name="laboratorio">
+	<schema name="administracao"/>
+	<role name="postgres"/>
+	<position x="780" y="63"/>
+	<column name="idlaboratorio" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="datainsercao" not-null="true">
+		<type name="date"/>
+	</column>
+	<column name="usuarioinsercao" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="dataalteracao">
+		<type name="date"/>
+	</column>
+	<column name="usuarioalteracao">
+		<type name="integer"/>
+	</column>
+	<constraint name="idlaboratorio" type="pk-constr" table="administracao.laboratorio">
+		<columns names="idlaboratorio" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="reservado">
+	<schema name="administracao"/>
+	<role name="postgres"/>
+	<position x="420" y="163"/>
+	<column name="idreservado" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="idprofessor" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="idlaboratorio" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="idhorario" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="detalhe">
+		<type name="varchar" length="50"/>
+	</column>
+	<column name="datainsercao" not-null="true">
+		<type name="date"/>
+	</column>
+	<column name="usuarioinsercao" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="dataalteracao">
+		<type name="date"/>
+	</column>
+	<column name="usuarioalteracao">
+		<type name="integer"/>
+	</column>
+	<constraint name="idreservado" type="pk-constr" table="administracao.reservado">
+		<columns names="idreservado" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="horario">
+	<schema name="administracao"/>
+	<role name="postgres"/>
+	<position x="860" y="283"/>
+	<column name="idhorario" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="horarioinicio" not-null="true">
+		<type name="varchar" length="10"/>
+	</column>
+	<column name="horariofim" not-null="true">
+		<type name="varchar" length="10"/>
+	</column>
+	<column name="datainsercao" not-null="true">
+		<type name="date"/>
+	</column>
+	<column name="usuarioinsercao" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="dataalteracao">
+		<type name="date"/>
+	</column>
+	<column name="usuarioalteracao">
+		<type name="integer"/>
+	</column>
+	<constraint name="idhorario" type="pk-constr" table="administracao.horario">
+		<columns names="idhorario" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<constraint name="idprofessor" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.professor" table="administracao.reservado">
+	<columns names="idprofessor" ref-type="src-columns"/>
+	<columns names="idprofessor" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="idlaboratorio" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.laboratorio" table="administracao.reservado">
+	<columns names="idlaboratorio" ref-type="src-columns"/>
+	<columns names="idlaboratorio" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="idhorario" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.horario" table="administracao.reservado">
+	<columns names="idhorario" ref-type="src-columns"/>
+	<columns names="idhorario" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_reservado_professor" type="relfk"
+	 src-table="administracao.reservado"
+	 dst-table="seguranca.professor"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_reservado_laboratorio" type="relfk"
+	 src-table="administracao.reservado"
+	 dst-table="administracao.laboratorio"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_reservado_horario" type="relfk"
+	 src-table="administracao.reservado"
+	 dst-table="administracao.horario"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>

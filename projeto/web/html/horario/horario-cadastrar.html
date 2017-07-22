@@ -1,0 +1,45 @@
+<main>
+    <section>
+        <div class="container margin-top">
+            <div class="row">
+                <form name="formHorario" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s8 m6 offset-s2 offset-m3">
+                            <input
+                                    type="text"
+                                    ng-model="horario.horarioInicio"
+                                    id="horarioInicio"
+                                    required
+                                    class="validate"
+                                    placeholder="00:00"
+                                    mask="99:99"
+                                    ng-maxlength="5"
+                            >
+                            <label for="horarioInicio">Horario Inicio</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8 m6 offset-s2 offset-m3">
+                            <input
+                                    type="text"
+                                    ng-model="horario.horarioFim"
+                                    id="horarioFim"
+                                    required
+                                    class="validate"
+                                    placeholder="00:00"
+                                    mask="99:99"
+                                    ng-maxlength="5"
+                            >
+                            <label for="horarioFim">Horario Fim</label>
+                        </div>
+                    </div>
+                </form>
+                <li class="btn-floating btn-large waves-effect waves-light red right">
+                    <a href="/horario" class="active">
+                        <i class="material-icons">add</i>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </section>
+</main>

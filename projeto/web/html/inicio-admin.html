@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FATEC</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <link rel="stylesheet" href="./../componentes/materialize.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/fonts/roboto/Roboto-Thin.woff"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/fonts/roboto/Roboto-Thin.woff2"></script>
+
+    <link rel="stylesheet" href="../css/professor.css">
+
+    <!-- ANGULARJS-->
+    <script type="application/javascript" src="./../js/angular.min.js"></script>
+    <script type="application/javascript" src="./../componentes/angular-route.js"></script>
+    <script type="application/javascript" src="./../componentes/ngMask.min.js"></script>
+    <script type="application/javascript" src="./../angular/app.js"></script>
+    <script type="application/javascript" src="./../angular/route.js"></script>
+    <script type="application/javascript" src="./../angular/professorCtrl.js"></script>
+
+</head>
+<body ng-app="app">
+{{2+2}}
+
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+        <div class="container">
+            <a href="#" class="brand-logo">FATEC - Franca</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Sair</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#/contato">Home</a></li>
+                <li><a href="#">Reservar</a></li>
+                <li><a href="#">Laboratórios</a></li>
+                <li><a href="#/professor" class="active">Professores</a></li>
+                <li><a href="#">Horário</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav-content">
+        <div class="container row">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#test1">Home</a></li>
+                <li class="tab"><a href="#test2">Reservar</a></li>
+                <li class="tab"><a href="#test3">Laboratórios</a></li>
+                <li class="tab"><a href="#test4" class="active">Professores</a></li>
+                <li class="tab"><a href="#test4">Horário</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--<div id="test1" class="col s12">Test 1</div>-->
+<!--<div id="test2" class="col s12">Test 2</div>-->
+<!--<div id="test3" class="col s12">Test 3</div>-->
+<!--<div id="test4" class="col s12">Test 4</div>-->
+
+
+<div ng-view></div>
+
+<div></div>
+<footer class="page-footer">
+    <div class="cor-footer footer-copyright">
+        <div class="container">
+            © 2017 Copyright Fatec Franca - Dr. Thomaz Novelino
+            <a class="grey-text text-lighten-4 right"
+               href="https://www.facebook.com/profile.php?id=100009535411121"
+               target="_blank">&nbsp; Cleber Spirlandeli</a>
+            <span class="right">Desenvolvido e hospedado por </span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function () {
+        $(".button-collapse").sideNav();
+        Materialize.updateTextFields();
+    });
+</script>
+</body>
+</html>

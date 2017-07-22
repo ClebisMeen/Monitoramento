@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>2S SISTEMAS</title>
+
+    <!-- FONTAWESOME.IO -->
+    <link rel="stylesheet" href="../../web/fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS  -->
+    <link href="./../componentes/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="./../css/inicio.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" sizes="192x192" href="./../../images/ios-desktop.png">
+
+    <!-- ANGULARJS-->
+    <script type="application/javascript" src="./../js/angular.min.js"></script>
+
+</head>
+<body ng-app>
+<div>
+    <header>
+        <nav id="nav-inicio" class="color-nav">
+            <div class="container">
+                <div class="nav-wrapper white">
+                    <a href="#nav-inicio" class="brand-logo">
+                        <div class="img-logo"></div>
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#">Laboratórios</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a class="waves-effect waves-light btn" href="#modal1">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4 class="center">Iniciar sessão</h4>
+        <p class="grey-text text-darken-1 center">Continuar para ter acesso ao painel administrativo</p>
+        <form action="">
+            <div class="row">
+                <form class="col s10">
+                    <div class="row">
+                        <div class="col m2"></div>
+                        <div class="input-field col s12 m8">
+                            <input id="name-user" type="text" class="validate">
+                            <label for="name-user">Usuário</label>
+                            <div class="col m2"></div>
+                        </div>
+                    </div>
+
+                    <div id="div-password" class="row">
+                        <div class="col m2"></div>
+                        <div class="input-field col s12 m8">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Senha</label>
+                            <div class="col m2"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a id="bnt-entrar" href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Entrar</a>
+    </div>
+</div>
+
+<div class="parallax-container padding-img">
+    <div class="parallax"><img class="img-paralax"
+                               src="./../../images/Low-Classroom_Traditional_Introduction-Banner.jpg"></div>
+    <!--<img id="centralizado" src="./../../images/logo_topo_site_sombra.png" alt="Fatec Franca">-->
+</div>
+
+<!--  CURSOS  -->
+<div id="cursos" class="espaco-curso cursos">
+    <div class="container">
+        <div id="ads" class="row z-depth-3 padding-curso">
+            <h4 class="text-center cor-letra">Cursos</h4>
+            <div class="col s12 m12">
+                <h4 class="text-center">Análise e Desenvolvimento de Sistemas</h4>
+                <p class="size text-center">
+                    40 vagas - Período: manhã<br/>
+                    40 vagas - Período: noite<br/>
+                    Duração de 3 anos<br/>
+                    Contato: ads@fatecfranca.edu.br
+                </p>
+                <p class="size text-center">
+                    <b>Perfil Profissional do Tecnólogo em Análise e Desenvolvimento de
+                        Sistemas</b>
+                </p>
+                <br/>
+                <p class="ident size">
+                    <b>O TECNÓLOGO EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</b> analisa, projeta,
+                    documenta, especifica,
+                    testa,
+                    implanta e mantém sistemas computacionais de informação. Esse profissional trabalha, também, com
+                    ferramentas computacionais, equipamentos de informática e metodologia de projetos na produção de
+                    sistemas. Raciocínio lógico, emprego de linguagens de programação e de metodologias de construção de
+                    projetos, preocupação com a qualidade, usabilidade, robustez, integridade e segurança de programas
+                    computacionais são fundamentais à atuação desse profissional.
+                </p>
+                <br/>
+                <p class="size text-center">
+                    <b>ÁREAS DE ATUAÇÃO</b>
+                </p>
+                <p class="ident">
+                    O profissional de Análise e Desenvolvimento de
+                    Sistemas pode atuar em empresas de
+                    assessoria e
+                    consultoria tecnológica e de desenvolvimento de sistemas, assim como nos diversos setores da
+                    economia: indústria, comércio, prestação de serviços, instituições financeiras, órgãos públicos ou
+                    como empreendedor em informática. Este profissional estará apto a:<br/>
+                    - Projetar e implementar sistemas de acordo com as necessidades institucionais<br/>
+                    - Coordenar infra-estruturas de tecnologia da informação, elaborando políticas e diretrizes a partir
+                    da análise de necessidades;<br/>
+                    - Realizar consultoria em Sistemas de Informação, avaliando e selecionando recursos de software e
+                    hardware;<br/>
+                    - Atuar em Centros de Pesquisa, de Ensino ou de desenvolvimento de software;<br/>
+                    - Empreender seu próprio negócio em informática.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="parallax-container tamanho-parallax padding-img">
+    <div class="parallax"><img class=""
+                               src="./../../images/professora.jpg"></div>
+</div>
+<div class="espaco-curso cursos">
+    <div class="container">
+        <div id="ge" class="row z-depth-3 padding-curso">
+            <div class="col s12 m12">
+                <h4 class="text-center">Gestão Empresarial</h4>
+                <p class="size text-center">
+                    20 vagas - EaD (Ensino a Distância)<br/>
+                    Duração de 3 anos<br/>
+                    Contato: ge@fatecfranca.edu.br</p>
+                <p class="size text-center">
+                    <b>Perfil Profissional do Tecnólogo em Gestão Empresarial</b>
+                </p>
+                <br/>
+                <p class="ident size">
+                    <b>O TECNÓLOGO EM GESTÃO EMPRESARIAL</b> desta área elabora, implementa planos de
+                    negócios e projetos de inovação tecnológica, utilizando métodos e técnicas de gestão na formação e
+                    organização empresarial, especificamente nos processos de comercialização, suprimento,
+                    armazenamento, movimentação de materiais e no gerenciamento de recursos financeiros e humanos. A
+                    habilidade para lidar com pessoas, a capacidade de comunicação, o trabalho em equipe, liderança,
+                    negociação, busca de informações, tomada de decisão em contextos econômicos, políticos, culturais e
+                    sociais distintos, são requisitos importantes a esse profissional.
+                </p>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container tamanho-parallax padding-img">
+    <div class="parallax"><img class=""
+                               src="./../../images/aluna.jpg"></div>
+</div>
+
+<div class="espaco-curso cursos">
+    <div class="container">
+        <div id="gpi" class="row z-depth-3 padding-curso">
+            <div class="col s12 m12">
+                <h4 class="text-center">Gestão da Produção Industrial</h4>
+                <p class="size text-center">
+                    40 vagas - Período: manhã<br/>
+                    40 vagas - Período: noite<br/>
+                    Duração de 3 anos<br/>
+                    Contato: gpi@fatecfranca.edu.br
+                </p>
+                <p class="size text-center">
+                    <b>Perfil Profissional do Tecnólogo em Gestão da Produção Industrial</b>
+                </p><br/>
+                <p class="ident size">
+                    <b>O TECNÓLOGO EM GESTÃO DA PRODUÇÃO INDUSTRIAL</b> atua nas organizações industriais, buscando a
+                    melhoria da qualidade e produtividade industrial. Dentre as atividades desempenhadas por esse
+                    profissional, destacam-se a identificação e o estudo de oportunidades de negócios na área
+                    industrial, coordenação de equipes de produção, diagnóstico e otimização de fluxos de materiais e a
+                    utilização de conhecimentos da logística industrial.
+                    <br/>
+                    O domínio e aplicação das normas de segurança no trabalho e gestão ambiental são requisitos à
+                    atuação desse profissional. Seus conhecimentos tecnológicos e científicos permitem atuar nas áreas
+                    administrativa, financeira, de criação, logística e, em especial, na produção calçadista. Está
+                    capacitado para exercer a racionalização e o uso da tecnologia da simulação de atividades no aumento
+                    da produtividade, na identificação e na redução dos custos industriais, em projetos de ampliação e
+                    estruturação da capacidade produtiva, na distribuição e movimentação do produto final.
+                    <br/>
+                    Pode dedicar-se à direção e ao gerenciamento de seu próprio negócio, à prestação de serviços de
+                    assessoria ao ensino e à pesquisa tecnológica, dentro de seu campo profissional.
+                </p><br/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="parallax-container tamanho-parallax padding-img">
+    <div class="parallax"><img class=""
+                               src="./../../images/professor.jpg"></div>
+</div>
+
+
+<!--  CONTATO  -->
+<div id="contato" class="espaco-curso">
+    <div class="container">
+        <div class="row z-depth-3 padding-curso">
+            <h4 class="text-center cor-letra">Contato</h4>
+            <div class="col s12 m6">
+                <div class="row">
+                    <h4 class="text-center">Secretaria Acadêmica</h4>
+                    <p class="size text-center">
+                        De 2ª a 6ª feira – das 8h as 21h<br/>
+                        Rua Irênio Grecco, 4580<br/>
+                        Vila Imperador<br/>
+                        CEP: 14405-191<br/>
+                        Telefone: (16) 3702-3204<br/>
+                        Fax: (16) 3702-2854<br/>
+                        E-mail: fatecfranca@fatecfranca.edu.br<br/>
+                    </p>
+                </div>
+
+            </div>
+            <div class="col s12 m6">
+                <h4 class="text-center">Localização</h4>
+                <p>&nbsp;<iframe style="border: 0;"
+                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.7925040105292!2d-47.40171446032716!3d-20.514730612530453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b0a650b93c4b5f%3A0xbe0e42f3aa42525c!2sFatec+Franca+-+Faculdade+de+Tecnologia+Dr.+Thomaz+Novelino!5e0!3m2!1sen!2sbr!4v1405514668487"
+                                 width="500" height="300" frameborder="0"></iframe>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer cor-footer">
+    <a id="botao-voltar-topo" class="btn-floating btn-large waves-effect waves-light fixa-botao">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Siga-nos nas nossas redes sociais</h5>
+
+                <div class="redes-sociais">
+                    <a href="https://www.facebook.com/FatecFranca/?ref=br_rs" target="_blank"><i
+                            class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/114506583413166478894" target="_blank"><i
+                            class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/FatecFranca" target="_blank"><i class="fa fa-twitter fa-2x"
+                                                                                 aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company-beta/22336923/" target="_blank"><i
+                            class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Mais informações</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="http://www.fatecfranca.edu.br/" target="_blank">Site
+                        Oficial Fatec Franca</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.vestibularfatec.com.br/home/"
+                           target="_blank">Site Oficial Fatec</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Copyright Fatec Franca - Dr. Thomaz Novelino
+            <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/profile.php?id=100009535411121"
+               target="_blank">&nbsp; Cleber Spirlandeli</a>
+            <span class="right">Desenvolvido e hospedado por </span>
+        </div>
+    </div>
+</footer>
+
+<script src="./../componentes/jquery-2.1.1.min.js"></script>
+<script src="./../componentes/materialize.js"></script>
+<script src="./../js/function-inicio.js"></script>
+
+
+<!--<script>-->
+    <!--$(document).ready(function () {-->
+        <!--$('.parallax').parallax();-->
+        <!--$('.modal').modal();-->
+    <!--});-->
+
+    <!--$(window).on("scroll", function () {-->
+        <!--if ($(window).scrollTop() > 135) {-->
+            <!--$('#botao-voltar-topo').show();-->
+        <!--} else {-->
+            <!--$('#botao-voltar-topo').hide();-->
+        <!--}-->
+    <!--});-->
+
+    <!--$("#ads,#ge,#gpi,#contato")-->
+        <!--.mouseenter(function () {-->
+            <!--$(this).removeClass("z-depth-3").addClass("z-depth-5");-->
+        <!--})-->
+        <!--.mouseleave(function () {-->
+                <!--$(this).removeClass("z-depth-5").addClass("z-depth-3");-->
+            <!--}-->
+        <!--);-->
+
+    <!--$("#botao-voltar-topo").click(function () {-->
+        <!--$("html, body").animate({scrollTop: 0}, "slow");-->
+        <!--return false;-->
+    <!--});-->
+<!--</script>-->
+
+</body>
+</html>

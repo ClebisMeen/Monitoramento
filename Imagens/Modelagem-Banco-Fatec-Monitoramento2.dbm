@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.8.2" last-position="0,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="novo_banco_de_dados">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<schema name="seguranca" rect-visible="true" fill-color="#e1e1e1">
+	<role name="postgres"/>
+</schema>
+
+<table name="professor">
+	<schema name="seguranca"/>
+	<role name="postgres"/>
+	<position x="60" y="103"/>
+	<column name="idProfessor" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="254"/>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="254"/>
+	</column>
+	<column name="senha" not-null="true">
+		<type name="varchar" length="200"/>
+	</column>
+	<column name="telefone">
+		<type name="varchar" length="25"/>
+	</column>
+	<constraint name="idProfessor" type="pk-constr" table="seguranca.professor">
+		<columns names="idProfessor" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<schema name="administracao" rect-visible="true" fill-color="#e1e1e1">
+	<role name="postgres"/>
+</schema>
+
+<table name="laboratorio">
+	<schema name="administracao"/>
+	<role name="postgres"/>
+	<position x="780" y="120"/>
+	<column name="idLaboratorio" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<constraint name="idLaboratorio" type="pk-constr" table="administracao.laboratorio">
+		<columns names="idLaboratorio" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="reservado">
+	<schema name="administracao"/>
+	<role name="postgres"/>
+	<position x="420" y="223"/>
+	<column name="idReservado" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="idProfessor" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="idLaboratorio" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="idHorario" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="detalhe">
+		<type name="varchar" length="50"/>
+	</column>
+	<constraint name="idReservado" type="pk-constr" table="administracao.reservado">
+		<columns names="idReservado" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="horario">
+	<schema name="administracao"/>
+	<role name="postgres"/>
+	<position x="860" y="340"/>
+	<column name="idHorario" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="50"/>
+	</column>
+	<constraint name="idHorario" type="pk-constr" table="administracao.horario">
+		<columns names="idHorario" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<constraint name="idProfessor" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.professor" table="administracao.reservado">
+	<columns names="idProfessor" ref-type="src-columns"/>
+	<columns names="idProfessor" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="idLaboratorio" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.laboratorio" table="administracao.reservado">
+	<columns names="idLaboratorio" ref-type="src-columns"/>
+	<columns names="idLaboratorio" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="idHorario" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.horario" table="administracao.reservado">
+	<columns names="idHorario" ref-type="src-columns"/>
+	<columns names="idHorario" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_reservado_professor" type="relfk"
+	 src-table="administracao.reservado"
+	 dst-table="seguranca.professor"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_reservado_laboratorio" type="relfk"
+	 src-table="administracao.reservado"
+	 dst-table="administracao.laboratorio"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_reservado_horario" type="relfk"
+	 src-table="administracao.reservado"
+	 dst-table="administracao.horario"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>

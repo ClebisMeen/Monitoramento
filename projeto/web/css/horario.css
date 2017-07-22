@@ -1,0 +1,18 @@
+
+@media screen and (max-width: 699px) {
+    #nav-small{
+        display: inline;
+    }
+    #nav-medium-large{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #nav-small{
+        display: none;
+    }
+    #nav-medium-large{
+        display: inline;
+    }
+}
